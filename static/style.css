@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f4f1ea;
+    --text: #1a1a1a;
+    --muted: #555;
+    --border: #1a1a1a;
+    --accent: #1a1a1a;
+    --link: #1a1a1a;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--bg);
+    color: var(--text);
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.7;
+}
+
+/* ── HEADER ── */
+header {
+    border-top: 4px solid var(--border);
+    border-bottom: 4px double var(--border);
+    padding: 1rem 0;
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color 0.2s;
+}
+
+nav a:hover {
+    border-bottom-color: var(--border);
+}
+
+/* ── MAIN ── */
+main {
+    min-height: 60vh;
+}
+
+h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* ── ARTICLES (lista) ── */
+article {
+    border-bottom: 1px solid #ccc;
+    padding: 1.5rem 0;
+}
+
+article:last-child {
+    border-bottom: none;
+}
+
+article h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+article h3 a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+article h3 a:hover {
+    text-decoration: underline;
+}
+
+article small {
+    color: var(--muted);
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+article p {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+}
+
+article a:not(h3 a) {
+    font-size: 0.82rem;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ── POST INDIVIDUAL ── */
+article h2 {
+    font-size: 1.6rem;
+    text-transform: none;
+    letter-spacing: -0.5px;
+    border: none;
+    padding: 0;
+    margin-bottom: 0.3rem;
+}
+
+.content {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    white-space: pre-wrap;
+}
+
+/* ── FORMULÁRIO ── */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input, textarea {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: #555;
+    box-shadow: 2px 2px 0px var(--border);
+}
+
+button {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.7rem 1.5rem;
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* ── LINKS GENÉRICOS ── */
+a {
+    color: var(--link);
+}
+
+/* ── FOOTER ── */
+footer {
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    padding-top: 1rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
