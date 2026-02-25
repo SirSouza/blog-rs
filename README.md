@@ -1,4 +1,4 @@
-# 🦀 ferrugem
+# 🦀 Blog-RS
 
 Um blog pessoal feito do zero em Rust, como projeto de aprendizado.
 
